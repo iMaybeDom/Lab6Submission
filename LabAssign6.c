@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+
+ * Dominick Amaral
+ * COP 3502C
+ * Lab Assignment 6
+ * 2/22/24
+
+ */
+
 int search(int numbers[], int low, int high, int value)
 {
     if (low > high) {
@@ -37,7 +46,7 @@ int main(void)
     int index;
     int* numArray = NULL;
     int countOfNums;
-    FILE* inFile = fopen("C:\\Users\\Dominick Amaral\\CLionProjects\\LabAss6\\input.txt", "r");
+    FILE* inFile = fopen("input.txt", "r");
 
     if (inFile == NULL) {
         perror("Error opening file");
@@ -67,7 +76,7 @@ int main(void)
         }
         else
         {
-            printf("Item %d does not exist in the number array\n", value);
+            printf("Item %d doesn't exist in the number array\n", value);
         }
 
         free(numArray);
